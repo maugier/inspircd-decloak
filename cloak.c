@@ -1,3 +1,7 @@
+// Copyright 2012 Maxime Augier
+// Distributed under the terms of the GNU General Public License
+
+
 #include "hash.h"
 #include <stdio.h>
 #include <string.h>

@@ -1,0 +1,27 @@
+=====================
+inspircd-decloak v0.1
+=====================
+
+This is a decloaker for the "full" cloaking algorithm of Inspircd 2.0 and above.
+It is intended for server admins to decloak an IP a posteriori, if the clear whois
+information is no longer available.
+
+Cloaks computed with this algorithm look like "xxx.yyy.zzzzzz", with x,y and z being
+digits or letters between a and v. The administrator can add a custom prefix (default
+empty) or suffix (default ".IP").
+
+To use the program you must know the network-wide secret cloaking key, defined as
+
+    <cloak key="mysecretkey">
+
+in the modules.conf file.
+
+
+Usage:
+
+    make
+    ./cloak mysecretkey 127.0.0.1
+    rpp.ger.bod9q3
+    ./decloak mysecretkey rpp.ger.bod9q3
+    127.0.0.1
+
